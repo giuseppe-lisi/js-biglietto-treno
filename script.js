@@ -10,14 +10,13 @@ function finalPrice(kilometers, age) {
         price = price - ((price / 100) * 40);
         alert(`Il costo del biglietto è ${price.toFixed(2)}`);
     } else {
-        alert(`Il costo del biglietto è ${price}`);
+        alert(`Il costo del biglietto è ${price.toFixed(2)}`);
     }
 }
 
 //richiesta dati utente
 const kmUser = parseInt(prompt("Quanti Km dovrai percorrere?"));
 const ageUser = parseInt(prompt("Quanti anni hai?"));
-
 
 //se possibile applico discount, poi restituisco 
 //il prezzo all'utente

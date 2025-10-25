@@ -1,12 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trenitalia</title>
-</head>
-<body>
-    
-    <script src="script.js"></script>
-</body>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <title>Trenitalia</title>
+    </head>
+
+    <body>
+        
+        <!-- Header -->
+        <div class="container">
+            <div class="row my-4">
+                <div class="col-12">
+                    <img src="./img/logo.svg" style = "height: 50px;">
+                </div>
+            </div>
+        </div>
+
+        <!-- Main -->
+        <div class="container shadow-lg p-4" style="border-radius: 1.5rem;">
+            <div class="row my-3">
+                <div class="col">
+                    <h1>Calcola il prezzo del tuo biglietto</h1>
+                </div>
+            </div>
+            <form class="row">
+                <div class="col-6">
+                    <label for="km" class="form-label">Km da percorrere</label>
+                    <input type="number" class="form-control" id="km" maxlength="4" min="1" max="1500" required>
+                </div>
+                <div class="col-6">
+                    <label for="age" class="form-label">Età passeggero</label>
+                    <input type="number" class="form-control" id="age" min="0" max="99" maxlength="2" required></input>
+                </div>
+                <div class="row my-3">
+                    <div class="col">
+                        <h4>Costo del biglietto:</h4>
+                        <p id="prezzo"></p>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-danger" type="submit">Calcola Prezzo</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.bundle.min.js" integrity="sha512-HvOjJrdwNpDbkGJIG2ZNqDlVqMo77qbs4Me4cah0HoDrfhrbA+8SBlZn1KrvAQw7cILLPFJvdwIgphzQmMm+Pw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </body>
+
 </html>
