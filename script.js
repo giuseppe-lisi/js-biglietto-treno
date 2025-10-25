@@ -4,20 +4,16 @@ function finalPrice(kilometers, age) {
 
     //determino se l'utente ha diritto o meno ad un discount
     if (age < 18) {
-        price = price - ((price / 100) * 20);
-        alert(`Il costo del biglietto è ${price.toFixed(2)}`);
+        price -= (price / 100) * 20;
     } else if (age >= 65) {
-        price = price - ((price / 100) * 40);
-        alert(`Il costo del biglietto è ${price.toFixed(2)}`);
-    } else {
-        document.getElementById("prezzo").innerHTML = price.toFixed(2);
+        price -= (price / 100) * 40;
     }
+    return price.toFixed(2); 
 }
 
 //richiesta dati utente
 const kmUser = parseInt(prompt("Quanti Km dovrai percorrere?"));
 const ageUser = parseInt(prompt("Quanti anni hai?"));
 
-//se possibile applico discount, poi restituisco 
-//il prezzo all'utente
-finalPrice(kmUser, ageUser);
+//fornisco il prezzo finale all'utente
+document.getElementById("prezzo").innerHTML = finalPrice(kmUser, ageUser) + "€";
