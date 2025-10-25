@@ -10,7 +10,7 @@ function finalPrice(kilometers, age) {
         price = price - ((price / 100) * 40);
         alert(`Il costo del biglietto è ${price.toFixed(2)}`);
     } else {
-        alert(`Il costo del biglietto è ${price.toFixed(2)}`);
+        document.getElementById("prezzo").innerHTML = price.toFixed(2);
     }
 }
 
