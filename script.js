@@ -13,9 +13,9 @@ function calculateFinalPrice(kilometers, age) {
 
     //determino se l'utente ha diritto o meno ad un discount
     if (age < 18) {
-        price -= (price / 100) * 20;
+        price *= 0.80;
     } else if (age >= 65) {
-        price -= (price / 100) * 40;
+        price *= 0.60;
     }
 
     //restituisco il prezzo del biglietto
